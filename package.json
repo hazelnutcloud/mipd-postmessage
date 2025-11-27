@@ -1,0 +1,51 @@
+{
+  "devDependencies": {
+    "@types/bun": "latest",
+    "viem": "^2.40.3",
+    "zile": "^0.0.13"
+  },
+  "scripts": {
+    "build": "zile",
+    "publish": "zile publish:prepare && npm publish && zile publish:post"
+  },
+  "[!start-pkg]": "",
+  "name": "mipd-postmessage",
+  "module": "./dist/index.js",
+  "version": "0.0.2",
+  "type": "module",
+  "author": "hazelnutcloud",
+  "homepage": "https://github.com/hazelnutcloud/mipd-postmessage",
+  "license": "MIT",
+  "peerDependencies": {
+    "typescript": "^5",
+    "mipd": "^0.0.7"
+  },
+  "dependencies": {
+    "nanoid": "^5.1.6",
+    "ox": "^0.9.17"
+  },
+  "exports": {
+    ".": {
+      "src": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./child": {
+      "src": "./src/child.ts",
+      "types": "./dist/child.d.ts",
+      "default": "./dist/child.js"
+    },
+    "./parent": {
+      "src": "./src/parent.ts",
+      "types": "./dist/parent.d.ts",
+      "default": "./dist/parent.js"
+    }
+  },
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ]
+}
