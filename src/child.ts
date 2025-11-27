@@ -1,4 +1,4 @@
-import * as Mipd from "mipd";
+import type * as Mipd from "mipd";
 import type { ChildMessageSchema, ParentMessageSchema } from "./parent.js";
 import { createProviderProxy } from "./proxy.js";
 

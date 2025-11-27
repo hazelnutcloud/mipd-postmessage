@@ -11,7 +11,7 @@
   "[!start-pkg]": "",
   "name": "mipd-postmessage",
   "module": "./dist/index.js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "author": "hazelnutcloud",
   "homepage": "https://github.com/hazelnutcloud/mipd-postmessage",

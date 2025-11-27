@@ -1,4 +1,4 @@
-import * as Mipd from "mipd";
+import type * as Mipd from "mipd";
 import type { RpcRequest } from "ox/RpcRequest";
 import type { RpcResponse } from "ox/RpcResponse";
 

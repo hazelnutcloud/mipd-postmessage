@@ -1,6 +1,6 @@
 import * as RpcRequest from "ox/RpcRequest";
 import type { ChildMessageSchema, ParentMessageSchema } from "./parent.js";
-import type { EIP1193Provider } from "mipd";
+import type * as Mipd from "mipd";
 import { nanoid } from "nanoid";
 
 export class ProviderRpcError extends Error {
@@ -19,7 +19,7 @@ export class ProviderRpcError extends Error {
 export function createProviderProxy(parameters: {
   parent: Window;
   uuid: string;
-}): EIP1193Provider {
+}): Mipd.EIP1193Provider {
   const { parent, uuid } = parameters;
   const store = RpcRequest.createStore();
   const requests = new Map<
