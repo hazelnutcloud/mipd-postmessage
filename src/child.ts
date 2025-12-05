@@ -13,7 +13,7 @@ export type RequestProvidersReturnType = (() => void) | undefined;
 export function requestProviders(
   listener: RequestProvidersParameters,
 ): RequestProvidersReturnType {
-  if (typeof window === undefined) return;
+  if (typeof window === 'undefined') return;
 
   const handler = (event: MessageEvent<ParentMessageSchema>) => {
     if (event.data.type !== "eip6963:announceProvider") return;
